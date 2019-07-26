@@ -6,4 +6,4 @@ before_install:
   - chmod +x ./dep
   - ./dep ensure -v
 script:
-  - go test -v $(go list ./... | grep -v /vendor/ | grep -v /app)
+  - go test -vet=off -v $(go list ./... | grep -v /vendor/ | grep -v /app)
