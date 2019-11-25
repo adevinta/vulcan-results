@@ -1,12 +1,9 @@
 #!/bin/sh
 
-if [ -f "$1" ]; then
-  # Force logs to STDOUT
-  cat $1 | sed 's/LogFile *=.*/LogFile = ""/g' > config.toml
-else
-  echo "ERROR: Expected config file"
-  echo "Usage: $0 config.toml"
-fi
+export PORT=${PORT:-8080}
+export DEBUG=${DEBUG:-false}
 
-# Force logs to STDOUT
-./vulcan-results config.toml
+# Apply env variables
+cat config.toml | envsubst > run.toml
+
+./vulcan-results run.toml

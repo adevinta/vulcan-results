@@ -9,8 +9,12 @@ RUN dep ensure -v
 RUN go get -v ./...
 
 FROM alpine:3.10
+
+RUN apk add --no-cache --update gettext
+
 WORKDIR /app
 COPY --from=builder /go/bin/vulcan-results .
+COPY config.toml .
 COPY run.sh .
-EXPOSE 8080
-CMD ["./run.sh"]
+
+CMD ["./run.sh", "./config.toml"]
