@@ -9,6 +9,7 @@ function add_tag() {
     docker push $DOCKER_REPO:$1
 }
 
+# Add always a tag with the commit id.
 add_tag `git rev-parse --short HEAD`
 
 TAG=`git describe --tag --match "v*"`
