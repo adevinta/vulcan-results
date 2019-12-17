@@ -18,6 +18,15 @@ RUN rm -rf app client tool swagger && \
   rm main.go && go get ./...
 
 FROM alpine:3.10
+
+ARG BUILD_RFC3339="1970-01-01T00:00:00Z"
+ARG COMMIT="local"
+ARG VERSION="dirty"
+
+ENV BUILD_RFC3339 "$BUILD_RFC3339"
+ENV COMMIT "$COMMIT"
+ENV VERSION "$VERSION"
+
 RUN apk add --no-cache --update gettext ca-certificates
 
 WORKDIR /app
