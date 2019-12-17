@@ -31,4 +31,4 @@ WORKDIR /app
 COPY --from=builder /go/bin/vulcan-results .
 COPY config.toml .
 COPY run.sh .
-CMD ["./run.sh", "./config.toml"]
+CMD ["./run.sh"]
