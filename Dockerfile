@@ -1,5 +1,5 @@
 FROM golang:1.12.7-alpine3.10 AS builder
-RUN apk add --no-cache --update git dep
+RUN apk add --no-cache --update git dep libc6-compat
 RUN mkdir -p $GOPATH/src/github.com/goadesign/
 WORKDIR $GOPATH/src/github.com/goadesign/
 RUN git clone https://github.com/goadesign/goa.git
@@ -15,7 +15,8 @@ RUN rm -rf app client tool swagger && \
   dep ensure -v && \
   rm -rf vendor && \
   goagen bootstrap -d github.com/adevinta/vulcan-results/design && \
-  rm main.go && go get ./...
+  rm main.go && go get -d ./... && \
+  CGO_ENABLED=1 go install -a -tags netgo -ldflags '-w' ./...
 
 FROM alpine:3.10
 
