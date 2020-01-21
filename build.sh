@@ -8,7 +8,12 @@ go install github.com/goadesign/goa/goagen
 
 
 # Autogenerate content
-goagen bootstrap -d github.com/adevinta/vulcan-results/design
+# goagen bootstrap -d github.com/adevinta/vulcan-results/design
+
+goagen app -d github.com/adevinta/vulcan-results/design
+goagen client -d github.com/adevinta/vulcan-results/design
+goagen swagger -d github.com/adevinta/vulcan-results/design
+
 
 # Compile and install
 go install ./...
