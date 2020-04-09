@@ -23,7 +23,7 @@ type Config struct {
 	Region                  string
 	LinkBase                string
 	Endpoint                string
-	PathStype               bool
+	PathStyle               bool
 }
 
 // Storage is an interface of a type that can save a result.
