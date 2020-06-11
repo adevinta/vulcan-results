@@ -5,7 +5,7 @@
 
 ## Build & Install
 ```
-go get github.com/adevinta/vulcan-results
+GO111MODULE=on go get github.com/adevinta/vulcan-results/cmd/vulcan-result
 ```
 
 ## Build, regenerate code from Goa DSL & install in a Docker container
