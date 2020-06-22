@@ -59,7 +59,7 @@ func NewMiddleware(metricsClient vmetrics.Client) goa.Middleware {
 	return func(h goa.Handler) goa.Handler {
 		return func(ctx context.Context, rw http.ResponseWriter, req *http.Request) (err error) {
 			// Do not push metrics for healtchcheck
-			if req.URL.Path == "healthcheck" {
+			if req.URL.Path == "/healthcheck" {
 				return h(ctx, rw, req)
 			}
 
