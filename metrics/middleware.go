@@ -8,7 +8,6 @@ import (
 	"time"
 
 	metrics "github.com/adevinta/vulcan-metrics-client"
-	vmetrics "github.com/adevinta/vulcan-metrics-client"
 	"github.com/goadesign/goa"
 )
 
@@ -55,7 +54,7 @@ var (
 )
 
 // NewMiddleware builds and returns a new metrics middleware for the API.
-func NewMiddleware(metricsClient vmetrics.Client) goa.Middleware {
+func NewMiddleware(metricsClient metrics.Client) goa.Middleware {
 	return func(h goa.Handler) goa.Handler {
 		return func(ctx context.Context, rw http.ResponseWriter, req *http.Request) (err error) {
 			// Do not push metrics for healtchcheck
