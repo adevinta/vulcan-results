@@ -1,3 +1,7 @@
+/*
+Copyright 2021 Adevinta
+*/
+
 //go:generate goagen bootstrap -d github.com/adevinta/vulcan-results/design
 
 package main
