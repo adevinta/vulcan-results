@@ -4,17 +4,18 @@ go 1.18
 
 require (
 	github.com/BurntSushi/toml v0.3.1
-	github.com/adevinta/vulcan-metrics-client v0.0.0-20200617105830-6078a0e12ebd
+	github.com/adevinta/vulcan-metrics-client v1.0.0
 	github.com/adevinta/vulcan-report v0.0.0-20211117082128-cadc974cc14c
 	github.com/aws/aws-sdk-go v1.12.70
 	github.com/goadesign/goa v1.4.3
 	github.com/gofrs/uuid v3.2.0+incompatible
-	github.com/sirupsen/logrus v1.0.4
+	github.com/sirupsen/logrus v1.7.0
 	github.com/spf13/cobra v0.0.5
 )
 
 require (
-	github.com/DataDog/datadog-go v3.7.1+incompatible // indirect
+	github.com/DataDog/datadog-go v4.8.3+incompatible // indirect
+	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/armon/go-metrics v0.0.0-20171117184120-7aa49fde8082 // indirect
 	github.com/dimfeld/httppath v0.0.0-20170720192232-ee938bf73598 // indirect
 	github.com/dimfeld/httptreemux v5.0.0+incompatible // indirect
@@ -34,10 +35,8 @@ require (
 	github.com/smartystreets/goconvey v1.6.4 // indirect
 	github.com/spf13/pflag v1.0.3 // indirect
 	github.com/zach-klippenstein/goregen v0.0.0-20160303162051-795b5e3961ea // indirect
-	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2 // indirect
 	golang.org/x/net v0.0.0-20190311183353-d8887717615a // indirect
-	golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a // indirect
-	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
-	gopkg.in/gemnasium/logrus-airbrake-hook.v2 v2.1.2 // indirect
+	golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c // indirect
 	gopkg.in/ini.v1 v1.51.1 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
