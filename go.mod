@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/adevinta/vulcan-metrics-client v1.0.0
-	github.com/adevinta/vulcan-report v0.0.0-20211117082128-cadc974cc14c
+	github.com/adevinta/vulcan-report v1.0.0
 	github.com/aws/aws-sdk-go v1.12.70
 	github.com/goadesign/goa v1.4.3
 	github.com/gofrs/uuid v3.2.0+incompatible
