@@ -11,7 +11,7 @@ COPY . .
 
 ARG TARGETOS TARGETARCH
 WORKDIR /app/cmd/vulcan-results
-RUN GOOS=$TARGETOS GOARCH=$TARGETARCH go build -a -tags netgo -ldflags '-w' .
+RUN GOOS=$TARGETOS GOARCH=$TARGETARCH go build -tags netgo -ldflags '-w' .
 
 FROM alpine:3.18
 
