@@ -1,6 +1,6 @@
 # Copyright 2019 Adevinta
 
-FROM --platform=$BUILDPLATFORM golang:1.22-alpine3.18 as builder
+FROM --platform=$BUILDPLATFORM golang:1.24-alpine AS builder
 
 WORKDIR /app
 
@@ -20,8 +20,8 @@ RUN apk add --no-cache --update gettext ca-certificates
 ARG BUILD_RFC3339="1970-01-01T00:00:00Z"
 ARG COMMIT="local"
 
-ENV BUILD_RFC3339 "$BUILD_RFC3339"
-ENV COMMIT "$COMMIT"
+ENV BUILD_RFC3339="$BUILD_RFC3339"
+ENV COMMIT="$COMMIT"
 
 WORKDIR /app
 COPY --from=builder /app/cmd/vulcan-results/vulcan-results .
