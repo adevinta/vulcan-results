@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.24.1
 
 require (
-	github.com/BurntSushi/toml v1.5.0
+	github.com/BurntSushi/toml v1.6.0
 	github.com/adevinta/vulcan-metrics-client v1.0.1
 	github.com/adevinta/vulcan-report v1.0.0
 	github.com/aws/aws-sdk-go v1.55.0
