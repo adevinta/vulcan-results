@@ -11,7 +11,7 @@ require (
 	github.com/aws/aws-sdk-go v1.55.0
 	github.com/goadesign/goa v1.4.3
 	github.com/gofrs/uuid v4.4.0+incompatible
-	github.com/sirupsen/logrus v1.9.3
+	github.com/sirupsen/logrus v1.9.4
 	github.com/spf13/cobra v1.10.2
 )
 
